@@ -1,0 +1,13 @@
+names:
+- With Helmet
+- Without Helmet
+nc: 2
+roboflow:
+  license: Public Domain
+  project: bike-helmet-detection-2vdjo
+  url: https://universe.roboflow.com/bike-helmets/bike-helmet-detection-2vdjo/dataset/2
+  version: 2
+  workspace: bike-helmets
+test: test/images
+train: train/images
+val: valid/images
