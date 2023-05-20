@@ -58,7 +58,7 @@ python main.py
 ````
 
 5. Monitor the training progress and adjust hyperparameters as needed.
-6. Once the training is complete, the final weights will be saved in the `model_weights` directory.
+6. Once the training is complete, the final weights will be saved in the `runs/detect/results/weights/best.pt` directory.
 
 ## License
 
