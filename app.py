@@ -14,13 +14,14 @@ def index():
 @app.route('/predict',methods=['GET','POST'])
 def predict_helmet():
     if request.method=='GET':
+        print('Page Rendered')
         return render_template('home.html')
     else:
-        if 'file' in request.files:
-            image=request.files['file']
-            return 'Image uploaded successfully!'
-        else:
-            return 'Image did not upload'
+                print('Image Request Made')
+                image=request.files['file']
+                print('Image received')
+                return 'Image uploaded successfully!'
+            
         
 if __name__=="__main__":
     app.run(host="0.0.0.0",debug=True,port=5000)  

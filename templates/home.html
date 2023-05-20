@@ -12,16 +12,20 @@
 
 <body>
     <div class="container">
-        <input type="file" id="file" accept="image/*" hidden>
+        <form id="uploadForm" action="{{ url_for('predict_helmet') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" accept="image/*" hidden>
         <div class="img-area " data-img="">
             <i class='bx bxs-cloud-upload'></i>
             <h3>Upload Image</h3>
             <p>Image size must be less than <span>2mb</span></p>
         </div>
-        <button class="select-image">Select Image</button>
+        <button type="submit" class="upload-image" id="uploadImageBtn" hidden required>Upload Image</button>
+        
+        </form>
+        <button class="select-image" id="selectImageBtn">Select Image</button>
         <script src="{{ url_for('static', filename='script.js') }}"></script>
     </div>
-
+    
 </body>
 
 </html>
