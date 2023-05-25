@@ -2,6 +2,8 @@ from ultralytics import YOLO
 import glob
 import os
 
+
+
 dir_path = 'runs/detect/predict/*'
 if os.path.exists('runs/detect/predict'):
     for img in glob.glob(dir_path):
