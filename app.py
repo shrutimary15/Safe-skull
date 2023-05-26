@@ -1,6 +1,7 @@
 from flask import Flask,request,render_template
+import os
 
-
+from src.pipeline.predict_pipeline import PredictPipeline
 application=Flask(__name__)
 
 app=application
@@ -19,6 +20,13 @@ def predict_helmet():
     else:
                 print('Image Request Made')
                 image=request.files['file']
+                print(type(image))
+                os.makedirs('Uploads',exist_ok=True)
+                image_path=os.path.join('Uploads','Data.png')
+                image.save(image_path)
+
+                PredictPipeline.predict_pipeline(image_path)
+
                 print('Image received')
                 return 'Image uploaded successfully!'
             

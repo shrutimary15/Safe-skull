@@ -1,13 +1,17 @@
 from ultralytics import YOLO
 import glob
 import os
+import shutil
+
+directory_path = "runs/detect/predict"
+shutil.rmtree(directory_path)
 
 
-
-dir_path = 'runs/detect/predict/*'
-if os.path.exists('runs/detect/predict'):
-    for img in glob.glob(dir_path):
-      os.remove(img)
-    os.rmdir('runs/detect/predict')
 img_path = 'Bike-Helmet-Detection-2/test/images'
-os.system('yolo task=detect mode=predict model=runs/detect/train/weights/best.pt conf=0.5 source={}'.format(img_path))
+image_path='D:\Documents\Projects\AI-Camera-Implementation\Testdata\download.jpeg'
+command='yolo task=detect mode=predict model=runs/detect/train/weights/best.pt conf=0.5 source={}'.format(image_path)
+os.system(command)
+
+print('Needed Result\n',output)
+
+
