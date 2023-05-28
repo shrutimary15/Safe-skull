@@ -25,10 +25,10 @@ def predict_helmet():
                 image_path=os.path.join('Uploads','Data.png')
                 image.save(image_path)
 
-                PredictPipeline.predict_pipeline(image_path)
+                PredictPipeline.predict_pipeline(image_path=image_path)
 
                 print('Image received')
-                return 'Image uploaded successfully!'
+                return render_template('index.html',image_path=image_path)
             
         
 if __name__=="__main__":
