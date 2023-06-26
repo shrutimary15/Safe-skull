@@ -1,4 +1,20 @@
-<h1>Welcome to the home page </h1>
-<a href="\predict">Click Here</a>
-
-<img src="{{image_path}}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
+</head>
+<body>
+    <div class="banner">
+        <div class="content">
+            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" class="logo">
+            <h1>Helmet Detection</h1>
+            <p>Hey Let's Go</p>
+            <button type="button"><span></span>Detect Helmet</button>
+        </div>
+        
+    </div>
+</body>
+</html>
