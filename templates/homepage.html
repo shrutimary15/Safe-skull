@@ -12,9 +12,10 @@
             <img src="{{ url_for('static', filename='images/logo.jpeg') }}" class="logo">
             <h1>Helmet Detection</h1>
             <p>Hey Let's Go</p>
-            <button type="button"><span></span>Detect Helmet</button>
+            <a class="detectHelmetPageLink" href="/predict" hidden></a>
+            <button class="button"><span></span>Detect Helmet</button>
         </div>
-        
     </div>
+    <script src="{{ url_for('static', filename='scripts/homepage.js') }}"></script>
 </body>
 </html>

@@ -14,8 +14,10 @@
 
 
 .logo{
-    width: 100px;
+    width: 150px;
     cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .content{
     width: 100%;

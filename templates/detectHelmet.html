@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/detectHelmet.css') }}">
     <title>Image Classification</title>
 </head>
 
@@ -23,9 +23,8 @@
         
         </form>
         <button class="select-image" id="selectImageBtn">Select Image</button>
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
-    </div>
-    
+        <script src="{{ url_for('static', filename='scripts/detectHelmet.js') }}"></script>
+    </div>   
 </body>
 
 </html>

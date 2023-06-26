@@ -18,7 +18,9 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--light-blue);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),url('/static/images/background.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 .container{
     max-width:400px;
@@ -26,6 +28,7 @@ body{
     background: #fff;
     padding: 30px;
     border-radius: 30px;
+    opacity: 0.75;
 }
 .img-area{
     position: relative;
