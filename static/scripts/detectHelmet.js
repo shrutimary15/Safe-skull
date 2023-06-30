@@ -9,13 +9,15 @@ function isFileImage(file) {
     return acceptedImageTypes.includes(file.type);
 }
 
-selectImage.addEventListener('click',function(){
-    inputFile.click();
-})
-selectImage.removeEventListener('click', function () {
-    inputFile.click();
-});
+let imageSelected=false
 
+selectImage.addEventListener('click',function(){
+    if (imageSelected) {
+        uploadForm.submit();
+    } else {
+        inputFile.click();
+    }
+})
 inputFile.addEventListener('change', function () {
     const image = this.files[0]
     console.log(image);
@@ -32,13 +34,7 @@ inputFile.addEventListener('change', function () {
                 imgArea.classList.add('active');
                 imgArea.dataset.img = image.name;
                 selectImage.innerHTML='Upload Image';
-            }
-            if (inputFile.files.length > 0) {
-                selectImage.addEventListener('click', function () {
-                    selectImage.disabled = true;
-                    inputFile.disabled = true;
-                    uploadForm.submit();
-                })    
+                imageSelected = true
             }
             reader.readAsDataURL(image);
         }

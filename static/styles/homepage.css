@@ -42,40 +42,6 @@
     line-height: 25px;
 }
 
-/* .content button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-} */
-
-/* 
-.button {
-    background: #009688;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.5s;
-    transition: .2s ease-in-out 0s;
-}
-
-.button:hover {
-    width: 100%;
-    cursor: pointer;
-    transform: scale(1.25);
-} */
 
 
 .content .button {
