@@ -12,13 +12,15 @@ function isFileImage(file) {
 selectImage.addEventListener('click',function(){
     inputFile.click();
 })
-
+selectImage.removeEventListener('click', function () {
+    inputFile.click();
+});
 
 inputFile.addEventListener('change', function () {
     const image = this.files[0]
     console.log(image);
-    if (image.size < 2000000) {
-        if(isFileImage(image)){
+    if (isFileImage(image)) {
+        if (image.size < 2000000){
             const reader = new FileReader();
             reader.onload = () => {
                 const allImg = imgArea.querySelectorAll('img');
@@ -29,19 +31,23 @@ inputFile.addEventListener('change', function () {
                 imgArea.appendChild(img);
                 imgArea.classList.add('active');
                 imgArea.dataset.img = image.name;
+                selectImage.innerHTML='Upload Image';
             }
             if (inputFile.files.length > 0) {
-
-                uploadForm.submit();
+                selectImage.addEventListener('click', function () {
+                    selectImage.disabled = true;
+                    inputFile.disabled = true;
+                    uploadForm.submit();
+                })    
             }
             reader.readAsDataURL(image);
         }
         else{
-            alert("Select only Image File")
+            alert("Image size more than 2mb")
         } 
     }
     else {
-        alert("Image size more than 2mb")
+        alert("Select only Image File")
     }
 });
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
 </head>
+
 <body>
     <div class="banner">
         <div class="content">
@@ -13,9 +15,10 @@
             <h1>Helmet Detection</h1>
             <p>Hey Let's Go</p>
             <a class="detectHelmetPageLink" href="/predict" hidden></a>
-            <button class="button"><span></span>Detect Helmet</button>
+            <button class="button">Detect Helmet</button>
         </div>
     </div>
     <script src="{{ url_for('static', filename='scripts/homepage.js') }}"></script>
 </body>
+
 </html>

@@ -1,25 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
 
-.banner{
+.banner {
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),url('/static/images/background.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/static/images/background.jpeg');
     background-size: cover;
     background-position: center;
-}   
+}
 
 
-.logo{
+.logo {
     width: 150px;
     cursor: pointer;
     border-radius: 50%;
     overflow: hidden;
 }
-.content{
+
+.content {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -28,17 +31,18 @@
     color: #fff;
 }
 
-.content h1{
+.content h1 {
     font-size: 50px;
     margin-top: 20px;
 }
-.content p{
-   margin: 20px auto;
-   font-weight: 10;
-   line-height: 25px;
+
+.content p {
+    margin: 20px auto;
+    font-weight: 10;
+    line-height: 25px;
 }
 
-.content button{
+/* .content button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -51,9 +55,10 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-}
+} */
 
-.content span{
+/* 
+.button {
     background: #009688;
     height: 100%;
     width: 0;
@@ -61,11 +66,33 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index:-1;
+    z-index: -1;
     transition: 0.5s;
+    transition: .2s ease-in-out 0s;
 }
 
-button:hover span{
+.button:hover {
     width: 100%;
+    cursor: pointer;
+    transform: scale(1.25);
+} */
+
+
+.content .button {
+    font-size: 18px;
+    padding: 15px;
+    border: 2px solid #FFF;
+    border-radius: 25px;
+    color: #fff;
+    display: block;
+    margin: 50px auto;
+    background: transparent;
+    transition: .2s ease-in-out 0s;
 }
 
+.content .button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    background: #009688;
+    opacity: 0.85;
+}
