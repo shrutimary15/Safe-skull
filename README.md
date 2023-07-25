@@ -67,3 +67,15 @@ The AI camera implementation is licensed under the [MIT License](LICENSE). Feel 
 Please note that while the AI camera system aims to detect whether a person is wearing a helmet or not, it may not provide perfect accuracy in all scenarios. It is important to exercise caution and rely on multiple safety measures when assessing helmet usage.
 
 For more information, refer to the documentation and comments within the codebase. If you encounter any issues or have suggestions for improvements, please open an issue in the repository.
+
+
+
+
+
+Website UI
+<img width="960" alt="image" src="https://github.com/shrutimary15/Safe-skull/assets/90182268/8bbc43be-0ef3-44ae-bbb4-4af6c6d4ba5b">
+<img width="960" alt="image" src="https://github.com/shrutimary15/Safe-skull/assets/90182268/40f11d01-2982-4b14-92d9-d5766088deaa">
+<img width="960" alt="image" src="https://github.com/shrutimary15/Safe-skull/assets/90182268/b9ec6016-a17b-43ea-89b5-672862d6f223">
+
+
+
