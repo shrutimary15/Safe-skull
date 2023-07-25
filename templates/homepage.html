@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="`t" content="width=device-width, initial-scale=1.0">
+    <title>Safe-Skull</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
 </head>
 
@@ -12,8 +12,11 @@
     <div class="banner">
         <div class="content">
             <img src="{{ url_for('static', filename='images/logo.jpeg') }}" class="logo">
-            <h1>Helmet Detection</h1>
-            <p>Hey Let's Go</p>
+            <h1>Safe-Skull App</h1>
+            <div class="container-bio">
+                <p>Your AI companion dedicated to promoting road safety.<br> With lightning fast precision, 
+                    I spot helmets to protect riders worldwide.Join me in making every ride a safer one.</p>
+            </div>
             <a class="detectHelmetPageLink" href="/predict" hidden></a>
             <button class="button">Detect Helmet</button>
         </div>

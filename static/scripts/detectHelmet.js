@@ -9,9 +9,9 @@ function isFileImage(file) {
     return acceptedImageTypes.includes(file.type);
 }
 
-let imageSelected=false
+let imageSelected = false
 
-selectImage.addEventListener('click',function(){
+selectImage.addEventListener('click', function () {
     if (imageSelected) {
         uploadForm.submit();
     } else {
@@ -22,7 +22,7 @@ inputFile.addEventListener('change', function () {
     const image = this.files[0]
     console.log(image);
     if (isFileImage(image)) {
-        if (image.size < 2000000){
+        if (image.size < 2000000) {
             const reader = new FileReader();
             reader.onload = () => {
                 const allImg = imgArea.querySelectorAll('img');
@@ -33,14 +33,14 @@ inputFile.addEventListener('change', function () {
                 imgArea.appendChild(img);
                 imgArea.classList.add('active');
                 imgArea.dataset.img = image.name;
-                selectImage.innerHTML='Upload Image';
+                selectImage.innerHTML = 'Run Detection';
                 imageSelected = true
             }
             reader.readAsDataURL(image);
         }
-        else{
+        else {
             alert("Image size more than 2mb")
-        } 
+        }
     }
     else {
         alert("Select only Image File")

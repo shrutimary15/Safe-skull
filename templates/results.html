@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Result Page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/results.css') }}">
 </head>
 <body>
     <div class="banner">
         <div class="container">
+            <h1>Result Image</h1>
             <div class="img-box">
                 <img src="{{image_path}}" />
             </div>
+            <div class="result-container">
+                <b class="result-line">{{nohelmet_value}} Detected</b>
+            </div>
         </div>
-        
     </div>
 </body>
 </html>

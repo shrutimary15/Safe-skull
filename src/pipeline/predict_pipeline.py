@@ -42,22 +42,23 @@ class PredictPipeline:
         model = YOLO('runs/detect/train/weights/best.pt')
         predictions = model(resized_image, save_txt=None)
         #{1 : without helmet, 0: with helmet}
+        count=0
         with open("runs/detect/predict/predicted_labels.txt", '+w') as file:
             for idx, prediction in enumerate(predictions[0].boxes.xywhn): # change final attribute to desired box format
                 cls = int(predictions[0].boxes.cls[idx].item())
                 # Write line to file in YOLO label format : cls x y w h
                 file.write(f"{cls}, {prediction[0].item()}, {prediction[1].item()}, {prediction[2].item()}, {prediction[3].item()}\n")
                 
-                #Normalizing image
-                x1,y1,x2,y2=PredictPipeline.normalize_image(prediction[0].item(),prediction[1].item(),prediction[2].item(),prediction[3].item())
-
-                # Draw the rectangle on the image
-                cv2.rectangle(resized_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-
-                # Display the image with the rectangle
+                if cls==1:
+                    #Normalizing image
+                    x1,y1,x2,y2=PredictPipeline.normalize_image(prediction[0].item(),prediction[1].item(),prediction[2].item(),prediction[3].item())
+                    count=count+1
+                    # Draw the rectangle on the image
+                    cv2.rectangle(resized_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 
             cv2.imwrite(os.path.join(directory_path,'predicted.png'),resized_image)
-        return os.path.join(directory_path,'predicted.png')
+            cv2.imwrite(os.path.join('static','images/predicted.png'),resized_image)
+        return os.path.join('static','images/predicted.png'),count
 
                 
             
