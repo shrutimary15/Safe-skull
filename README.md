@@ -1,4 +1,4 @@
-# AI Camera Implementation with YOLOv8 Helmet Detection
+# Helmet Detection with YOLOv8 
 
 This repository provides an implementation of an AI camera system that utilizes the YOLOv8 model for detecting whether a person in an uploaded image is wearing a helmet or not. This AI camera system is built using Python and several popular libraries for computer vision and deep learning.
 
