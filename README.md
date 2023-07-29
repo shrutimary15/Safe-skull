@@ -1,4 +1,6 @@
 # Helmet Detection with YOLOv8 
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
 
 This repository provides an implementation of an AI camera system that utilizes the YOLOv8 model for detecting whether a person in an uploaded image is wearing a helmet or not. This AI camera system is built using Python and several popular libraries for computer vision and deep learning.
 
